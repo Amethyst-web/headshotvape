@@ -1,7 +1,8 @@
 /**
  * Created by Nikita on 21.06.2016.
  */
-$(document).ready(function(){
+$(window).load(function(){
+    $('.cd-transition-layer').addClass('opening');
     var frameProportion = 1.78, //png frame aspect ratio
         frames = 10, //number of png frames
         resize = false;
