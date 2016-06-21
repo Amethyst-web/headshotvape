@@ -2,8 +2,10 @@
  * Created by Nikita on 21.06.2016.
  */
 $(window).load(function(){
-    $('.cd-transition-layer').addClass('opening');
-    var frameProportion = 1.78, //png frame aspect ratio
+    setTimeout(function(){
+        $('.cd-transition-layer').addClass('opening');
+    }, 100);
+    var frameProportion = 1.77777, //png frame aspect ratio
         frames = 10, //number of png frames
         resize = false;
 
@@ -12,7 +14,7 @@ $(window).load(function(){
     $(window).on('resize', function(){
         if( !resize ) {
             resize = true;
-            (!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
+            (!window.requestAnimationFrame) ? setLayerDimensions() : window.requestAnimationFrame(setLayerDimensions);
         }
     });
 
