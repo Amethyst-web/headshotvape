@@ -1,0 +1,57 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.cd-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.cd-transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+.cd-transition-layer .bg-layer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-5%);
+    height: 100%;
+    /* our sprite is composed of 25 frames */
+    width: 1000%;
+    background: url(../img/Spint.jpg) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+/*.cd-transition-layer.visible {*/
+    /*opacity: 1;*/
+    /*visibility: visible;*/
+/*}*/
+.cd-transition-layer.opening .bg-layer {
+    animation: cd-sprite 0.8s steps(9);
+    animation-fill-mode: forwards;
+}
+
+@keyframes cd-sprite {
+    0% {
+        transform: translateY(-50%) translateX(-5%);
+    }
+    100% {
+        transform: translateY(-50%) translateX(-95%);
+    }
+}
