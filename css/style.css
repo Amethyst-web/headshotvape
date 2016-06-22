@@ -4,6 +4,8 @@ html, body{
     margin: 0;
     padding: 0;
     border: 0;
+    background: black;
+    font-family: 'Open Sans', sans-serif;
 }
 .cd-modal {
     position: fixed;
@@ -32,7 +34,6 @@ html, body{
     top: 50%;
     transform: translateY(-50%) translateX(-5%);
     height: 100%;
-    /* our sprite is composed of 25 frames */
     width: 1000%;
     background: url(../img/Spint.jpg) no-repeat 0 0;
     background-size: 100% 100%;
@@ -43,8 +44,76 @@ html, body{
     /*visibility: visible;*/
 /*}*/
 .cd-transition-layer.opening .bg-layer {
-    animation: cd-sprite 0.8s steps(9);
+    animation: cd-sprite 1s steps(9);
     animation-fill-mode: forwards;
+}
+
+.head_links{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    box-sizing: border-box;
+    opacity: 0;
+}
+.head_links h1{
+    float: right;
+    margin: 0;
+}
+.head_links a:first-child{
+    margin-right: 50px;
+}
+.head_links a{
+    color: white;
+    text-decoration: none;
+    padding-left: 40px;
+    display: inline-block;
+    height: 55px;
+    font-size: 30px;
+    line-height: 55px;
+}
+.head_links a.mail{
+    background: url('../img/mail.png') no-repeat;
+    padding-left: 75px;
+    background-position-y: 10px;
+}
+.head_links a.phone{
+    background: url('../img/phone.png') no-repeat;
+}
+.bottom_links{
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 40px;
+    color: white;
+    box-sizing: border-box;
+    opacity: 0;
+    text-align: center;
+}
+.bottom_links a.vk{
+    display: inline-block;
+    background: url('../img/vk.png') no-repeat;
+    margin-left: 40px;
+    height: 94px;
+    width: 95px;
+}
+.bottom_links a.inst{
+    display: inline-block;
+    background: url('../img/inst.png') no-repeat;
+    height: 94px;
+    width: 95px;
+}
+.visible{
+    opacity: 1;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 }
 
 @keyframes cd-sprite {
