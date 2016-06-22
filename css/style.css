@@ -44,7 +44,7 @@ html, body{
     /*visibility: visible;*/
 /*}*/
 .cd-transition-layer.opening .bg-layer {
-    animation: cd-sprite 1s steps(9);
+    animation: cd-sprite 1.5s steps(9);
     animation-fill-mode: forwards;
 }
 

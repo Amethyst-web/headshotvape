@@ -6,7 +6,7 @@ $(window).load(function(){
         $('.cd-transition-layer').addClass('opening');
         setTimeout(function(){
             $('.bottom_links, .head_links').addClass('visible');
-        }, 1100);
+        }, 1600);
     }, 100);
 });
 var frameProportion = 1.77777, //png frame aspect ratio
